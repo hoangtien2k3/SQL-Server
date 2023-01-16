@@ -1,0 +1,22 @@
+//
+- The SQL INSERT INTO Statement: 
+    + The INSERT INTO statement is used to insert new records in a table.
+    (chèn thêm thông tin vào bảng)
+
+
+- INSERT INTO Syntax
+    CÓ THỂ VIẾT HÀM INSERT INTO THEO 2 CÁCH:
+
+    1. Specify both the column names and the values to be inserted:
+        INSERT INTO table_name (column1, column2, column3, ...)
+        VALUES (value1, value2, value3, ...);
+
+    2. 
+        INSERT INTO table_name
+        VALUES (value1, value2, value3, ...);
+
+
+- INSERT INTO Example:
+
+    Ex: INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+        VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');

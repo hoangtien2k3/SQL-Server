@@ -1,0 +1,31 @@
+
+//
+- What is a NULL Value?   
+    + Trường có giá trị NULL là trường không có giá trị.
+
+// 
+- How to Test for NULL Values?
+    + KHÔNG THỂ KIỂM TRA GIÁ TRỊ NULL BẰNG CÁC TOÁN TỬ SO SÁNH NHƯ: AS, =, <, OR, <>.
+    + CHÚNG TA SẼ SỬ DỤNG: IS NULL và IS NOT NULL là toán tử thay thế.
+
+
+
+//
+- IS NULL Syntax: (để kiểm tra các giá trị trống)
+    SELECT column_names
+    FROM table_name
+    WHERE column_name IS NULL;
+
+    Ex:     SELECT CustomerName, ContactName, Address
+            FROM Customers
+            WHERE Address IS NULL;
+
+// 
+- IS NOT NULL Syntax: (để kiểm tra các giá trị không trống)
+    SELECT column_names
+    FROM table_name
+    WHERE column_name IS NOT NULL;
+
+    Ex:     SELECT CustomerName, ContactName, Address
+            FROM Customers
+            WHERE Address IS NOT NULL;
