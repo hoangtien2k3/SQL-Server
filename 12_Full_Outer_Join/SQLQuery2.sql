@@ -1,0 +1,12 @@
+
+USE HoangTien2k3
+Go
+
+Select * From dbo.GIAOVIEN, dbo.BOMON
+Where GIAOVIEN.MABM = BOMON.MABM
+
+
+Select * From dbo.GIAOVIEN FULL OUTER JOIN dbo.BOMON
+ON GIAOVIEN.MABM = BOMON.MABM
+
+
