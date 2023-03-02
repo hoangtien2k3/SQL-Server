@@ -1,0 +1,5 @@
+﻿SQL Server là một hệ thống quản trị cơ sở dữ liệu quan hệ được phát triển bởi Microsoft. Nó cho phép các nhà phát triển phát triển, quản lý và truy xuất dữ liệu trong các ứng dụng phần mềm. SQL Server cung cấp các tính năng bảo mật, độ tin cậy và khả năng mở rộng để đảm bảo dữ liệu được quản lý an toàn và hiệu quả.
+
+SQL Server hỗ trợ nhiều ngôn ngữ lập trình như C++, C#, Java và có thể kết nối với các công nghệ khác như .NET Framework, OLE DB, ODBC và JDBC. SQL Server cũng hỗ trợ các tính năng quản lý cơ sở dữ liệu, như dịch vụ phục hồi, sao lưu, phục hồi và phân quyền.
+
+SQL Server được sử dụng rộng rãi trong các ứng dụng doanh nghiệp lớn và phần mềm trên máy chủ. Nó có thể được triển khai trên nhiều hệ điều hành, bao gồm Windows và Linux. SQL Server có nhiều phiên bản khác nhau, từ các phiên bản miễn phí như SQL Server Express đến các phiên bản cao cấp như SQL Server Enterprise.
