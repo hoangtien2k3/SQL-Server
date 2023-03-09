@@ -1,0 +1,5 @@
+
+Create database QLCongTy
+go
+
+
