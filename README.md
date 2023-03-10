@@ -1,3 +1,89 @@
+## Dưới đây là một số câu truy vấn dữ liệu phổ biến trong SQL Server:
+
+- [SELECT](): Lấy dữ liệu từ cơ sở dữ liệu
+> Ví dụ: SELECT * FROM Customers;
+
+- [WHERE](): Lấy các bản ghi thỏa mãn điều kiện
+> Ví dụ: SELECT * FROM Customers WHERE City = 'Hanoi';
+
+- [ORDER BY](): Sắp xếp các bản ghi theo thứ tự tăng hoặc giảm dần
+> Ví dụ: SELECT * FROM Customers ORDER BY CustomerName ASC;
+
+- [JOIN](): Kết hợp dữ liệu từ hai hoặc nhiều bảng khác nhau dựa trên một điều kiện
+> Ví dụ: SELECT Orders.OrderID, Customers.CustomerName FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
+- [GROUP BY](): Nhóm các bản ghi theo một hoặc nhiều trường
+> Ví dụ: SELECT Country, COUNT(*) FROM Customers GROUP BY Country;
+
+- [HAVING](): Lọc các bản ghi nhóm dựa trên một điều kiện
+> Ví dụ: SELECT Country, COUNT() FROM Customers GROUP BY Country HAVING COUNT() > 5;
+
+- [INSERT INTO](): Thêm bản ghi mới vào bảng
+> Ví dụ: INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) VALUES ('Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany');
+
+- [UPDATE](): Cập nhật giá trị cho các bản ghi trong bảng
+> Ví dụ: UPDATE Customers SET ContactName = 'Alfred Schmidt' WHERE CustomerID = 1;
+
+- [DELETE](): Xóa bản ghi từ bảng
+> Ví dụ: DELETE FROM Customers WHERE CustomerID = 1;
+
+- [LIKE](): Lấy các bản ghi thỏa mãn điều kiện đặc biệt với sử dụng phép so sánh chuỗi
+> Ví dụ: SELECT * FROM Customers WHERE City LIKE 'H%';
+
+- [IN](): Lấy các bản ghi mà giá trị của một trường nằm trong danh sách giá trị cho trước
+> Ví dụ: SELECT * FROM Customers WHERE Country IN ('USA', 'Canada');
+
+- [NOT](): Lấy các bản ghi mà không thỏa mãn điều kiện được chỉ định
+> Ví dụ: SELECT * FROM Customers WHERE NOT Country = 'Germany';
+
+- [BETWEEN](): Lấy các bản ghi trong khoảng giá trị cho trước
+> Ví dụ: SELECT * FROM Orders WHERE OrderDate BETWEEN '2022-01-01' AND '2022-12-31';
+
+- [EXISTS](): Kiểm tra xem có bản ghi thỏa mãn câu truy vấn con được chỉ định hay không
+> Ví dụ: SELECT * FROM Customers WHERE EXISTS (SELECT * FROM Orders WHERE Customers.CustomerID = Orders.CustomerID);
+
+- [UNION](): Kết hợp các kết quả của hai hoặc nhiều câu truy vấn SELECT khác nhau vào một bảng
+> Ví dụ: SELECT CustomerName, ContactName FROM Customers UNION SELECT SupplierName, ContactName FROM Suppliers;
+
+- [DISTINCT](): Lấy các giá trị duy nhất từ một trường trong bảng
+> Ví dụ: SELECT DISTINCT Country FROM Customers;
+
+- [MAX và MIN](): Lấy giá trị lớn nhất hoặc nhỏ nhất từ một trường trong bảng
+> Ví dụ: SELECT MAX(Price) FROM Products WHERE CategoryID = 1;
+
+- [COUNT](): Đếm số bản ghi thỏa mãn điều kiện
+  > Ví dụ: SELECT COUNT(*) FROM Customers WHERE Country = 'Germany';
+
+- [AVG](): Tính trung bình giá trị của một trường trong bảng
+> Ví dụ: SELECT AVG(Price) FROM Products WHERE CategoryID = 1;
+
+- [SUM](): Tính tổng giá trị của một trường trong bảng
+> Ví dụ: SELECT SUM(Quantity) FROM Orders WHERE CustomerID = 1;
+
+- [GROUP BY WITH ROLLUP](): Nhóm các bản ghi theo một hoặc nhiều trường và tính tổng giá trị của các nhóm
+> Ví dụ: SELECT Country, City, SUM(Quantity) FROM Orders WHERE CustomerID = 1 GROUP BY Country, City WITH ROLLUP;
+
+- [INNER JOIN](): Lấy các bản ghi từ hai hoặc nhiều bảng khác nhau dựa trên một điều kiện, giống như câu lệnh JOIN nhưng chỉ lấy các bản ghi trùng khớp
+> Ví dụ: SELECT Customers.CustomerName, Orders.OrderID FROM Customers INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+
+- [LEFT JOIN](): Lấy tất cả các bản ghi từ bảng bên trái và các bản ghi trùng khớp từ bảng bên phải dựa trên một điều kiện
+> Ví dụ: SELECT Customers.CustomerName, Orders.OrderID FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+
+- [RIGHT JOIN](): Lấy tất cả các bản ghi từ bảng bên phải và các bản ghi trùng khớp từ bảng bên trái dựa trên một điều kiện
+> Ví dụ: SELECT Customers.CustomerName, Orders.OrderID FROM Customers RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+
+- [FULL OUTER JOIN](): Lấy tất cả các bản ghi từ cả hai bảng, bao gồm các bản ghi trùng khớp và các bản ghi không trùng khớp, dựa trên một điều kiện
+> Ví dụ: SELECT Customers.CustomerName, Orders.OrderID FROM Customers FULL OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+
+- [CROSS JOIN](): Tạo ra tất cả các cặp bản ghi từ hai bảng, không có điều kiện kết hợp
+> Ví dụ: SELECT * FROM Customers CROSS JOIN Orders;
+
+- [TOP](): Lấy một số bản ghi đầu tiên từ một bảng
+> Ví dụ: SELECT TOP 5 * FROM Customers;
+
+
+
+# Example Table: 
 
 ## dbo.BOMON:
 
