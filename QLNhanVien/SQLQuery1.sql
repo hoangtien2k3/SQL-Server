@@ -1,8 +1,0 @@
-
-
-Create database HospitalManagementSysteam
-go
-
-
-
-
