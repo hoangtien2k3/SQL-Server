@@ -10,6 +10,7 @@ GROUP BY column_name(s)
 ORDER BY column_name(s);
 ```
 
+#
 
 ### Example:
 Giả sử chúng ta có bảng "orders" sau đây:
@@ -38,6 +39,7 @@ GROUP BY customer_name;
 |Mary          | 350         |
 
 
+#
 
 #### Chúng ta có thể sử dụng câu lệnh GROUP BY để tính tổng số tiền của mỗi khách hàng theo tháng:
 ```Sql
@@ -48,7 +50,7 @@ GROUP BY customer_name, MONTH(order_date);
 
 ### Kết Qủa:
 |customer_name | month | total_amount|
-|--------------|---------------------|
+|--------------|-------|-------------|
 |John          | 1     | 150         |
 |Mary          | 1     | 350         |
 
