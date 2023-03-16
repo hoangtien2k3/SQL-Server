@@ -1,3 +1,7 @@
+![JDBC](https://images.viblo.asia/e832d1ef-84d2-4d48-bc1f-a2e933bf07e6.png)
+
+[**Tài Liệu Tham Khảo**](https://hoc.tv/hoc-sql-server)
+
 ### Cơ bản về SQL
 	SQL là gì
 	Các khái niệm RDBMS
