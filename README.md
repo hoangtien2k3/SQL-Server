@@ -1,3 +1,85 @@
+### Cơ bản về SQL
+	SQL là gì
+	Các khái niệm RDBMS
+	Database là gì
+	Cú pháp SQL cơ bản
+	Kiểu dữ liệu
+	Toán tử
+	Biểu thức (Expression)
+
+### SQL Database
+	Lệnh Create Database
+	Lệnh Drop Database
+	Lệnh Select Database
+	Lệnh Rename Database
+	
+### SQL Table
+	Lệnh Create Table
+	Lệnh Drop Table
+	Lệnh Delete Table
+	Lệnh Rename Table
+	Lệnh Truncate Table
+	Lệnh ALter Table
+	Sao chép bảng
+	Bảng tạm (Temp Table)
+	
+### Nhóm lệnh thao tác cơ bản
+	Truy vấn Update
+	Truy vấn Insert
+	Truy vấn Select
+	Mệnh đề Order By
+	Mệnh đề Group By
+	Từ khóa Distinct
+	Sắp xếp kết quả
+	
+### Mệnh đề trong SQL
+	Mệnh đề Where
+	Mệnh đề AND & OR
+	Mệnh đề WITH
+	Mệnh đề Like
+	Mệnh đề Top
+	
+### Hoạt động SQL nâng cao
+	Mệnh đề Union
+	Giá trị NULL
+	Cú pháp Alias
+	Chỉ mục (Index)
+	Sử dụng View
+	Mệnh đề Having
+	SQL Transaction
+	Toán tử Wildcard
+	Truy vấn con
+	Sử dụng Sequence
+	Xử lý bản sao
+	SQL Injection
+	
+### Ràng buộc trong SQL
+	Ràng buộc (Constraint)
+	Ràng buộc NOT NULL
+	Ràng buộc DEFAULT
+	Ràng buộc UNIQUE
+	Ràng buộc PRIMARY KEY
+	Ràng buộc FOREIGN KEY
+	Ràng buộc CHECK
+	Ràng buộc INDEX
+	
+### SQL Join
+	Sử dụng Join
+	Inner Join
+	Left Join
+	Right Join
+	Full Join
+	Self Join
+	Cartesian Join
+	
+### Hàm trong SQL
+	Hàm hữu ích
+	Hàm xử lý Date
+	Hàm xử lý chuỗi
+	Hàm xử lý số
+
+
+
 ## Dưới đây là một số câu truy vấn dữ liệu phổ biến trong SQL Server:
 
 - [SELECT](): Lấy dữ liệu từ cơ sở dữ liệu
