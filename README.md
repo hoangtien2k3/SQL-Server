@@ -1,8 +1,10 @@
 ![JDBC](https://images.viblo.asia/e832d1ef-84d2-4d48-bc1f-a2e933bf07e6.png)
 
-[**Tài Liệu Tham Khảo**](https://hoc.tv/hoc-sql-server)
+[**Tài Liệu Tham Khảo (SQL Server)**](https://hoc.tv/hoc-sql-server)
 
-### Cơ bản về SQL
+## Những Kiến Thức Cơ Bản Cần Học Trong Sql Server:
+
+### [Cơ bản về SQL]()
 	SQL là gì
 	Các khái niệm RDBMS
 	Database là gì
@@ -11,13 +13,13 @@
 	Toán tử
 	Biểu thức (Expression)
 
-### SQL Database
+### [SQL Database]()
 	Lệnh Create Database
 	Lệnh Drop Database
 	Lệnh Select Database
 	Lệnh Rename Database
 	
-### SQL Table
+### [SQL Table]()
 	Lệnh Create Table
 	Lệnh Drop Table
 	Lệnh Delete Table
@@ -27,7 +29,7 @@
 	Sao chép bảng
 	Bảng tạm (Temp Table)
 	
-### Nhóm lệnh thao tác cơ bản
+### [Nhóm lệnh thao tác cơ bản]()
 	Truy vấn Update
 	Truy vấn Insert
 	Truy vấn Select
@@ -36,14 +38,14 @@
 	Từ khóa Distinct
 	Sắp xếp kết quả
 	
-### Mệnh đề trong SQL
+### [Mệnh đề trong SQL]()
 	Mệnh đề Where
 	Mệnh đề AND & OR
 	Mệnh đề WITH
 	Mệnh đề Like
 	Mệnh đề Top
 	
-### Hoạt động SQL nâng cao
+### [Hoạt động SQL nâng cao]()
 	Mệnh đề Union
 	Giá trị NULL
 	Cú pháp Alias
@@ -57,7 +59,7 @@
 	Xử lý bản sao
 	SQL Injection
 	
-### Ràng buộc trong SQL
+### [Ràng buộc trong SQL]()
 	Ràng buộc (Constraint)
 	Ràng buộc NOT NULL
 	Ràng buộc DEFAULT
@@ -67,7 +69,7 @@
 	Ràng buộc CHECK
 	Ràng buộc INDEX
 	
-### SQL Join
+### [SQL Join]()
 	Sử dụng Join
 	Inner Join
 	Left Join
@@ -76,96 +78,247 @@
 	Self Join
 	Cartesian Join
 	
-### Hàm trong SQL
+### [Hàm trong SQL]()
 	Hàm hữu ích
 	Hàm xử lý Date
 	Hàm xử lý chuỗi
 	Hàm xử lý số
 
 
+# GIỚI Thiệu Cơ Bản Về Sql Server:
+
+
+## SQL là gì ?
+- SQL là viết tắt của Structured Query Language, là ngôn ngữ truy vấn mang tính cấu trúc.
+- SQL là ngôn ngữ cơ sở dữ liệu, được sử dụng để tạo, xóa trong cơ sở dữ liệu, lấy các hàng và sửa đổi các hàng, …
+
+
+## RDBMS là gì ?
+- RDBMS là viết tắt của Relational Database Management System ((Hệ thống quản lý cơ sở dữ liệu quan hệ)).
+
+## Bảng (Table) là gì ?
+- RDBMS Database sử dụng các bảng để lưu trữ dữ liệu.
+- Một bảng là một tập hợp các dữ liệu có liên quan và chứa các hàng và các cột để lưu dữ liệu.
+
+```Sql
+    +----+---------+-----+-----------+---------+
+    | ID |  TEN    | TUOI|  KHOAHOC  | HOCPHI  |
+    +----+---------+-----+-----------+---------+
+    |  1 | Hoang   |  21 | CNTT      | 4       |
+    |  2 | Viet    |  19 | DTVT      | 3.0     |
+    |  3 | Thanh   |  18 | KTDN      |  4      |
+    |  4 | Nhan    |  19 | CK        |   4.5   |
+    |  5 | Huong   |  20 | TCNH      |   5     |
+    +----+---------+-----+-----------+---------+
+```
+
+## Field (Trường) là gì ?
+Trường, là một thực thể nhỏ nhất của bảng, chứa thông tin cụ thể về mỗi bản ghi trong bảng.
+
+Ví Dụ:
+  - trường trong bảng sinh viên là id, ten, tuoi, khoahoc, hocphi.
+
+## Hàng hoặc bản ghi là gì ?
+- Một hàng của một bảng cũng được gọi là bản ghi.
+- Nó chứa thông tin cụ thể về một entry riêng rẽ trong bảng.
+- Hàng là một thực thể nằm ngang trong bảng.
+
+Ví Dụ:
+```Sql
+    +----+----------+-----+-----------+----+
+    |  1 | Hoang    |  21 | CNTT    |  4   |
+    +----+----------+-----+-----------+----+ 
+```
+
+## Column (cột) là gì ?
+- Một cột, là một thực thể dọc trong bảng, chứa tất cả thông tin được liên kết với một trường cụ thể trong một bảng.
+
+Ví Dụ:
+```html
+                  +-----------+
+                  | TEN       |
+                  +-----------+
+                  | Hoang     |
+                  | Viet      |
+                  | Thanh     |
+                  | Nhan      |
+                  | Huong     |
+                  +-----------+
+```
+
+## Giá trị NULL là gì ?
+- Giá trị NULL của một bảng xác định rằng trường đã bị để trống trong khi tạo bản ghi.
+
+## Ràng buộc (Constraint) trong SQL ?
+- Ràng buộc (Constraint) là các qui tắc cho các cột dữ liệu trong bảng.
+
+Dưới đây là các Ràng buộc (Constraint) được sử dụng phổ biến có sẵn trong SQL:
+- Ràng buộc [NOT NULL]() trong SQL: Bảo đảm một cột không thể có giá trị NULL.
+- Ràng buộc [DEFAULT]() trong SQL: Cung cấp một giá trị mặc định cho cột khi không được xác định.
+- Ràng buộc [UNIQUE]() trong SQL: Bảo đảm tất cả giá trị trong một cột là khác nhau.
+- Ràng buộc [PRIMARY]() Key trong SQL: Mỗi hàng/bản ghi được nhận diện một cách duy nhất trong một bảng.
+- Ràng buộc [FOREIGN]() Key trong SQL: Mỗi hàng/bản ghi được nhận diện một cách duy nhất trong bất kỳ bảng nào.
+- Ràng buộc [CHECK]() trong SQL: Bảo đảm tất cả giá trị trong một cột thỏa mãn các điều kiện nào đó.
+- Ràng buộc [INDEX]() trong SQL: Sử dụng để tạo và lấy dữ liệu từ Database một cách nhanh chóng.
+
+
+## Toàn vẹn dữ liệu trong SQL ?
+- Toàn vẹn dữ liệu (Data Integrity) là việc đặt ra các quy tắc trong một cơ sở dữ liệu nhằm kiểm tra các giá trị của dữ liệu trước khi được lưu trữ phải đảm bảo tính chính xác và hợp lý bên trong một cơ sở dữ liệu.
+
+Dưới đây là một số loại về tính toàn vẹn dữ liệu tồn tại với mỗi RDBMS:
+- [Entity Integrity](): Xác định rằng trong một bảng không nên có bản sao các hàng.
+- [Domain Integrity](): Bắt buộc các entry hợp lệ cho một cột đã cho bằng cách giới hạn kiểu, định dạng hoặc dãy giá trị.
+- [Referential integrity](): Xác định rằng, các hàng/bản ghi không thể bị xóa, mà được sử dụng bởi các hàng/bản ghi khác.
+- [User-Defined Integrity](): Áp dụng một số qui tắc được định nghĩa bởi người dùng. Các qui tắc này là khác với các loại toàn vẹn dữ liệu trên.
+
+
+## Chuẩn hóa cơ sở dữ liệu (Database Normalization) trong SQL ?
+- huẩn hóa cơ sở dữ liệu (Database normalization) là tiến trình tổ chức dữ liệu một cách hiệu quả trong một Database.
+
+#### Có hai lý do của tiến trình chuẩn hóa:
+- Để loại bỏ các dữ liệu thừa, ví dụ, lưu giữ cùng dữ liệu trong nhiều hơn một bảng.
+- Bảo đảm độc lập dữ liệu (dữ liệu liên quan với nhau được đặt trong cùng một bảng).
+
+
+
+
 
 ## Dưới đây là một số câu truy vấn dữ liệu phổ biến trong SQL Server:
 
-- [SELECT](): Lấy dữ liệu từ cơ sở dữ liệu
-> Ví dụ: SELECT * FROM Customers;
+#### [SELECT](): Lấy dữ liệu từ cơ sở dữ liệu
+```roomsql
+SELECT * FROM Customers;
+```
 
-- [WHERE](): Lấy các bản ghi thỏa mãn điều kiện
-> Ví dụ: SELECT * FROM Customers WHERE City = 'Hanoi';
+#### [WHERE](): Lấy các bản ghi thỏa mãn điều kiện
+```roomsql
+SELECT * FROM Customers WHERE City = 'Hanoi';
+```
 
-- [ORDER BY](): Sắp xếp các bản ghi theo thứ tự tăng hoặc giảm dần
-> Ví dụ: SELECT * FROM Customers ORDER BY CustomerName ASC;
+#### [ORDER BY](): Sắp xếp các bản ghi theo thứ tự tăng hoặc giảm dần
+```roomsql
+SELECT * FROM Customers ORDER BY CustomerName ASC;
+```
 
-- [JOIN](): Kết hợp dữ liệu từ hai hoặc nhiều bảng khác nhau dựa trên một điều kiện
-> Ví dụ: SELECT Orders.OrderID, Customers.CustomerName FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+#### [JOIN](): Kết hợp dữ liệu từ hai hoặc nhiều bảng khác nhau dựa trên một điều kiện
+```roomsql
+SELECT Orders.OrderID, Customers.CustomerName FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+```
 
-- [GROUP BY](): Nhóm các bản ghi theo một hoặc nhiều trường
-> Ví dụ: SELECT Country, COUNT(*) FROM Customers GROUP BY Country;
+#### [GROUP BY](): Nhóm các bản ghi theo một hoặc nhiều trường
+```roomsql
+SELECT Country, COUNT(*) FROM Customers GROUP BY Country;
+```
 
-- [HAVING](): Lọc các bản ghi nhóm dựa trên một điều kiện
-> Ví dụ: SELECT Country, COUNT() FROM Customers GROUP BY Country HAVING COUNT() > 5;
+#### [HAVING](): Lọc các bản ghi nhóm dựa trên một điều kiện
+```roomsql
+SELECT Country, COUNT() FROM Customers GROUP BY Country HAVING COUNT() > 5;
+```
 
-- [INSERT INTO](): Thêm bản ghi mới vào bảng
-> Ví dụ: INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) VALUES ('Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany');
+#### [INSERT INTO](): Thêm bản ghi mới vào bảng
+```roomsql
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) VALUES ('Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany');
+```
 
-- [UPDATE](): Cập nhật giá trị cho các bản ghi trong bảng
-> Ví dụ: UPDATE Customers SET ContactName = 'Alfred Schmidt' WHERE CustomerID = 1;
+#### [UPDATE](): Cập nhật giá trị cho các bản ghi trong bảng
+```roomsql
+UPDATE Customers SET ContactName = 'Alfred Schmidt' WHERE CustomerID = 1;
+```
 
-- [DELETE](): Xóa bản ghi từ bảng
-> Ví dụ: DELETE FROM Customers WHERE CustomerID = 1;
+#### [DELETE](): Xóa bản ghi từ bảng
+```roomsql
+DELETE FROM Customers WHERE CustomerID = 1;
+```
 
-- [LIKE](): Lấy các bản ghi thỏa mãn điều kiện đặc biệt với sử dụng phép so sánh chuỗi
-> Ví dụ: SELECT * FROM Customers WHERE City LIKE 'H%';
+#### [LIKE](): Lấy các bản ghi thỏa mãn điều kiện đặc biệt với sử dụng phép so sánh chuỗi
+```roomsql
+SELECT * FROM Customers WHERE City LIKE 'H%';
+```
 
-- [IN](): Lấy các bản ghi mà giá trị của một trường nằm trong danh sách giá trị cho trước
-> Ví dụ: SELECT * FROM Customers WHERE Country IN ('USA', 'Canada');
+#### [IN](): Lấy các bản ghi mà giá trị của một trường nằm trong danh sách giá trị cho trước
+```roomsql
+SELECT * FROM Customers WHERE Country IN ('USA', 'Canada');
+```
 
-- [NOT](): Lấy các bản ghi mà không thỏa mãn điều kiện được chỉ định
-> Ví dụ: SELECT * FROM Customers WHERE NOT Country = 'Germany';
+#### [NOT](): Lấy các bản ghi mà không thỏa mãn điều kiện được chỉ định
+```roomsql
+SELECT * FROM Customers WHERE NOT Country = 'Germany';
+```
 
-- [BETWEEN](): Lấy các bản ghi trong khoảng giá trị cho trước
-> Ví dụ: SELECT * FROM Orders WHERE OrderDate BETWEEN '2022-01-01' AND '2022-12-31';
+#### [BETWEEN](): Lấy các bản ghi trong khoảng giá trị cho trước
+```roomsql
+SELECT * FROM Orders WHERE OrderDate BETWEEN '2022-01-01' AND '2022-12-31';
+```
 
-- [EXISTS](): Kiểm tra xem có bản ghi thỏa mãn câu truy vấn con được chỉ định hay không
-> Ví dụ: SELECT * FROM Customers WHERE EXISTS (SELECT * FROM Orders WHERE Customers.CustomerID = Orders.CustomerID);
+#### [EXISTS](): Kiểm tra xem có bản ghi thỏa mãn câu truy vấn con được chỉ định hay không
+```roomsql
+SELECT * FROM Customers WHERE EXISTS (SELECT * FROM Orders WHERE Customers.CustomerID = Orders.CustomerID);
+```
 
-- [UNION](): Kết hợp các kết quả của hai hoặc nhiều câu truy vấn SELECT khác nhau vào một bảng
-> Ví dụ: SELECT CustomerName, ContactName FROM Customers UNION SELECT SupplierName, ContactName FROM Suppliers;
+#### [UNION](): Kết hợp các kết quả của hai hoặc nhiều câu truy vấn SELECT khác nhau vào một bảng
+```roomsql
+SELECT CustomerName, ContactName FROM Customers UNION SELECT SupplierName, ContactName FROM Suppliers;
+```
 
-- [DISTINCT](): Lấy các giá trị duy nhất từ một trường trong bảng
-> Ví dụ: SELECT DISTINCT Country FROM Customers;
+#### [DISTINCT](): Lấy các giá trị duy nhất từ một trường trong bảng
+```roomsql
+SELECT DISTINCT Country FROM Customers;
+```
 
-- [MAX và MIN](): Lấy giá trị lớn nhất hoặc nhỏ nhất từ một trường trong bảng
-> Ví dụ: SELECT MAX(Price) FROM Products WHERE CategoryID = 1;
+#### [MAX và MIN](): Lấy giá trị lớn nhất hoặc nhỏ nhất từ một trường trong bảng
+```roomsql
+SELECT MAX(Price) FROM Products WHERE CategoryID = 1;
+```
 
-- [COUNT](): Đếm số bản ghi thỏa mãn điều kiện
-  > Ví dụ: SELECT COUNT(*) FROM Customers WHERE Country = 'Germany';
+#### [COUNT](): Đếm số bản ghi thỏa mãn điều kiện
+```roomsql
+SELECT COUNT(*) FROM Customers WHERE Country = 'Germany';
+```
 
-- [AVG](): Tính trung bình giá trị của một trường trong bảng
-> Ví dụ: SELECT AVG(Price) FROM Products WHERE CategoryID = 1;
+#### [AVG](): Tính trung bình giá trị của một trường trong bảng
+```roomsql
+SELECT AVG(Price) FROM Products WHERE CategoryID = 1;
+```
 
-- [SUM](): Tính tổng giá trị của một trường trong bảng
-> Ví dụ: SELECT SUM(Quantity) FROM Orders WHERE CustomerID = 1;
+#### [SUM](): Tính tổng giá trị của một trường trong bảng
+```roomsql
+SELECT SUM(Quantity) FROM Orders WHERE CustomerID = 1;
+```
 
-- [GROUP BY WITH ROLLUP](): Nhóm các bản ghi theo một hoặc nhiều trường và tính tổng giá trị của các nhóm
-> Ví dụ: SELECT Country, City, SUM(Quantity) FROM Orders WHERE CustomerID = 1 GROUP BY Country, City WITH ROLLUP;
+#### [GROUP BY WITH ROLLUP](): Nhóm các bản ghi theo một hoặc nhiều trường và tính tổng giá trị của các nhóm
+```roomsql
+SELECT Country, City, SUM(Quantity) FROM Orders WHERE CustomerID = 1 GROUP BY Country, City WITH ROLLUP;
+```
 
-- [INNER JOIN](): Lấy các bản ghi từ hai hoặc nhiều bảng khác nhau dựa trên một điều kiện, giống như câu lệnh JOIN nhưng chỉ lấy các bản ghi trùng khớp
-> Ví dụ: SELECT Customers.CustomerName, Orders.OrderID FROM Customers INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+#### [INNER JOIN](): Lấy các bản ghi từ hai hoặc nhiều bảng khác nhau dựa trên một điều kiện, giống như câu lệnh JOIN nhưng chỉ lấy các bản ghi trùng khớp
+```roomsql
+SELECT Customers.CustomerName, Orders.OrderID FROM Customers INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+```
 
-- [LEFT JOIN](): Lấy tất cả các bản ghi từ bảng bên trái và các bản ghi trùng khớp từ bảng bên phải dựa trên một điều kiện
-> Ví dụ: SELECT Customers.CustomerName, Orders.OrderID FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+#### [LEFT JOIN](): Lấy tất cả các bản ghi từ bảng bên trái và các bản ghi trùng khớp từ bảng bên phải dựa trên một điều kiện
+```roomsql
+SELECT Customers.CustomerName, Orders.OrderID FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+```
 
-- [RIGHT JOIN](): Lấy tất cả các bản ghi từ bảng bên phải và các bản ghi trùng khớp từ bảng bên trái dựa trên một điều kiện
-> Ví dụ: SELECT Customers.CustomerName, Orders.OrderID FROM Customers RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+#### [RIGHT JOIN](): Lấy tất cả các bản ghi từ bảng bên phải và các bản ghi trùng khớp từ bảng bên trái dựa trên một điều kiện
+```roomsql
+SELECT Customers.CustomerName, Orders.OrderID FROM Customers RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+```
 
-- [FULL OUTER JOIN](): Lấy tất cả các bản ghi từ cả hai bảng, bao gồm các bản ghi trùng khớp và các bản ghi không trùng khớp, dựa trên một điều kiện
-> Ví dụ: SELECT Customers.CustomerName, Orders.OrderID FROM Customers FULL OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+#### [FULL OUTER JOIN](): Lấy tất cả các bản ghi từ cả hai bảng, bao gồm các bản ghi trùng khớp và các bản ghi không trùng khớp, dựa trên một điều kiện
+```roomsql
+SELECT Customers.CustomerName, Orders.OrderID FROM Customers FULL OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+```
 
-- [CROSS JOIN](): Tạo ra tất cả các cặp bản ghi từ hai bảng, không có điều kiện kết hợp
-> Ví dụ: SELECT * FROM Customers CROSS JOIN Orders;
+#### [CROSS JOIN](): Tạo ra tất cả các cặp bản ghi từ hai bảng, không có điều kiện kết hợp
+```roomsql
+SELECT * FROM Customers CROSS JOIN Orders;
+```
 
-- [TOP](): Lấy một số bản ghi đầu tiên từ một bảng
-> Ví dụ: SELECT TOP 5 * FROM Customers;
+#### [TOP](): Lấy một số bản ghi đầu tiên từ một bảng
+```roomsql
+SELECT TOP 5 * FROM Customers;
+```
 
 
 
