@@ -218,3 +218,9 @@ GO
 		   (6, 6);
 		   GO
 
+
+
+USE QUANLYSACH
+GO
+Select * FROM SINHVIEN
+Select * FROM TACGIA

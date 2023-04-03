@@ -10,7 +10,8 @@ Where BOMON.MABM = GIAOVIEN.MABM
 
 
 -- cái trên và cái dưới giống nhau, Nhưng nên dùng kiểu Inner Join thì hay hơn.
-Select * From dbo.GIAOVIEN INNER JOIN dbo.BOMON 
+Select * From dbo.GIAOVIEN 
+INNER JOIN dbo.BOMON 
 ON BOMON.MABM = GIAOVIEN.MABM
 
 
