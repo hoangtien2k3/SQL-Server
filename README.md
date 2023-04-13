@@ -2,6 +2,8 @@
 
 [**Tài Liệu Tham Khảo (SQL Server)**](https://hoc.tv/hoc-sql-server)
 
+![](https://images.viblo.asia/d1aba5c0-21a2-4b37-9f71-629d1dc9c782.png)
+
 ## Những Kiến Thức Cơ Bản Cần Học Trong Sql Server:
 
 ### [Cơ bản về SQL]()
